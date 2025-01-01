@@ -7,7 +7,8 @@
     border: none;
     outline: none;
     text-decoration: none;
-}
+    
+}      
 html{
     font-size: 62.5%;
 }
@@ -20,7 +21,7 @@ body{
 }
 header{
     margin-top: 20px;
-    position: sticky;
+    position: ksticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,12 +37,15 @@ header{
 .logo{
     font-size: 3rem;
     cursor: pointer;
-    color: #b74b4b;
+    color: #df7b7b9f;
     font-weight: 800;
     transition: 0.5s ease;
+    filter: drop-shadow(#eb0000 0px 0px 15px);
+   
 }
 .logo:hover{
     transform: scale(1.1);
+
 }
 nav a{
     font-size: 1.8rem;
@@ -50,11 +54,15 @@ nav a{
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    unicode-bidi: isolate;
+    transition: 0.2s ease-in-out;
+    transition: 0.2s linear;
 }
 a:hover,
 a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
+    filter: drop-shadow( 10px 10px 10px, #b74b4b);
 }
 @media(max-width:995px) {
     nav {
@@ -74,6 +82,7 @@ a.active{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        
     }
     nav a:hover,
     nav a.active{
@@ -81,6 +90,25 @@ a.active{
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #b74b4b;
     }
+}
+.dark-mode{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+} 
+
+.dark-mode:hover{
+    transform: scale(1.1);
+    color: #b74b4b;
+   
+}
+body.dark-mode-class,
+nav a.dark-mode-class,
+section.dark-mode-class{
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in-out;
+    transition: 0.5s linear;
 }
 section{
     min-height: 100vh;
@@ -100,6 +128,7 @@ section{
 }
 span{
     color: #b74b4b;
+    filter: drop-shadow(#eb0000 0px 0px 15px );
 
 }
 .home-content h3{
@@ -114,13 +143,17 @@ span{
     position: relative;
     border-radius: 50%;
     width: 32vw;
-    box-shadow: 0 0 25px solid #b74b4b;
+    box-shadow: 0 0 55px #b74b4b;
     cursor: pointer;
     transition: 0.5 linear;
+    transition: 0.5s ease;
+    
 }
 .home-img img:hover{
     font-size: 1.8rem;
     font-weight: 500;
+    transform: scale(1.1);
+    box-shadow: 0 0 75px #b74b4b;
 }
 .social-icons a{
     display: inline-flex;
@@ -134,7 +167,7 @@ span{
     border-radius: 50%;
     margin: 3re 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: wheat;
+    color: #df7b7b;
 }
 .social-icons a:hover{
     color: black;
@@ -147,7 +180,6 @@ span{
     padding: 1rem 2.8rem;
     border-radius: 4rem;
     font-size: 1.8rem;
-    background-color: black;
     color: #b74b4b;
     letter-spacing: 0.3rem;
     font-weight: 600;
@@ -160,6 +192,7 @@ span{
     background-color: #b74b4b;
     color: black;
     box-shadow: 0 0 25px #b74b4b;
+    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .typing-text {
@@ -175,12 +208,11 @@ span{
 .typing-text span::before {
     content: "software Developer";
     color: #b74b4b;
-    animation: words 20s infinite;
+    animation: words 15s infinite;
 }
 
 .typing-text span::after {
     content: "";
-    background-color: black;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
@@ -198,19 +230,424 @@ span{
 @keyframes words {
 
     0%,
-    20% {
+    0.5% {
+        content: "";
+    }
+
+    0.5%,
+    1% {
+        content: "W";
+    }
+
+    1.5%,
+    2% {
+        content: "We";
+    }
+    2.5%,
+    3% {
+        content: "Web";
+    }
+    3.5%,
+    4% {
+        content: "Web D";
+    }
+    4.5%,
+    5%{
+        content: "Web De";
+    }
+    5.5%,
+    6%{
+        content: "Web Dev"; 
+    }
+    6.5%,
+    7%{
+        content:"Web Deve";
+    }
+    7.5%,
+    8%{
+        content:"Web Devel";
+    }
+    8.5%,
+    9%{
+        content:"Web Develo";
+    }
+    9.5%,
+    10%{
+        content:"Web Develop";
+    }
+    10.5,
+    11%{
+        content:"Web Develope";
+    }
+    11.5%,
+    12%{
         content: "Web Developer";
     }
-
-    21%,
-    40% {
-        content: "Developer";
+    12.5%,
+    13%{
+        content: "Web Develope";
     }
-
-    41%,
-    60% {
-        content: "Web Designer";
+    13.5%,
+    14%{
+        content:"Web Develop";
     }
+    14.5%,
+    15%{
+        content: "Web Develo";
+    }
+    15.5%,
+    16%{
+        content: "Web Devel";
+    }
+    16.5%,
+    17%{
+        content: "Web Deve";
+    }
+    17.5%,
+    18%{
+        content: "Web Dev";
+    }
+    18.5%,
+    19%{
+        content: "Web De";
+    }
+    19.5%,
+    20%{
+        content: "Web D";
+    }
+    20.5%,
+    21%{
+        content: "Web";
+    }
+    21.5%,
+    22%{
+        content: "We";
+    }
+    22.5%,
+    23%{
+        content: "W";
+    }
+    23.5%,
+    24%{
+        content: "";
+    }
+     24.5%,
+     25% {
+        content: "S";
+    }
+    
+     25.5%,
+     26% {
+         content: "So";
+    }
+    
+     26.5%,
+     27% {
+         content: "Soft";
+    }
+    
+         27.5%,
+         28% {
+             content: "Softw";
+         }
+    
+         28.5%,
+         29% {
+             content: "Softwa";
+         }
+    
+         29.5%,
+         30% {
+             content: "Softwar";
+         }
+    
+         30.5%,
+         31% {
+             content: "Software";
+         }
+    
+         31.5%,
+         32% {
+             content: "Software D";
+         }
+    
+         32.5%,
+         33% {
+             content: "Software De";
+         }
+    
+         33.5%,
+         34% {
+             content: "Software Dev";
+         }
+    
+         34.5%,
+         35% {
+             content: "Software Deve";
+         }
+    
+         35.5,
+         36% {
+             content: "Software Devel";
+         }
+    
+         36.5%,
+         37% {
+             content: "Software Develo";
+         }
+    
+         37.5%,
+         38% {
+             content: "Software Develop";
+         }
+    
+         38.5%,
+         39% {
+             content: "Software Develope";
+         }
+    
+         39.5%,
+         40% {
+             content: "Software Developer";
+         }
+    
+         41.5%,
+         42% {
+             content: "Software Develope";
+         }
+    
+         42.5%,
+         43% {
+             content: "Software Develop";
+         }
+    
+         43.5%,
+         44% {
+             content: "Software Develo";
+         }
+    
+         44.5%,
+         45% {
+             content: "Software Devel";
+         }
+    
+         45.5%,
+         46% {
+             content: "Software Deve";
+         }
+    
+         46.5%,
+         47% {
+             content: "Software Dev";
+         }
+    
+         47.5%,
+         48% {
+             content: "Software De";
+         }
+    
+         48.5%,
+         49% {
+             content: "Software D";
+         }
+    
+         49.5%,
+         50% {
+             content: "Software ";
+         }
+         50.5,
+         51{
+             content:"Softwar";
+         }
+         51.5%,
+         52%{
+            content:"Softwa";
+         }
+         52.5%,
+         53%{
+            content:"Softw";
+         }
+         53.5%,
+         54%{
+            content:"Soft";
+         }
+         54.5%,
+         55%{
+            content:"Sof";
+         }
+         55.5%,
+         56%{
+            content:"So";
+         }
+         56.5%,
+         57%{
+            content:"S";
+         }
+         57.5%,
+         58%{
+            content:"";
+         }
+                 58.5%,
+                 59% {
+                     content: "D";
+                 }
+        
+                 59.5%,
+                 60% {
+                     content: "De";
+                 }
+        
+                 61.5%,
+                 62% {
+                     content: "Dev";
+                 }
+        
+                 62.5%,
+                 63% {
+                     content: "Deve";
+                 }
+        
+                 63.5,
+                 64% {
+                     content: "Devel";
+                 }
+        
+                 64.5%,
+                 65% {
+                     content: "Develo";
+                 }
+        
+                 66.5%,
+                 67% {
+                     content: "Develop";
+                 }
+        
+                 67.5%,
+                 68% {
+                     content: "Develope";
+                 }
+        
+                 68.5%,
+                 69% {
+                     content: "Developer";
+                 }
+        
+                 69.5%,
+                 70% {
+                     content: "Develope";
+                 }
+        
+                 70.5%,
+                 71% {
+                     content: "Develop";
+                 }
+        
+                 71.5%,
+                 72% {
+                     content: "Develo";
+                 }
+        
+                 72.5%,
+                 73% {
+                     content: "Devel";
+                 }
+        
+                 73.5%,
+                 74% {
+                     content: "Deve";
+                 }
+        
+                 74.5%,
+                 75% {
+                     content: "Dev";
+                 }
+        
+                 75.5%,
+                 76% {
+                     content: "De";
+                 }
+        
+                 76.5%,
+                 77% {
+                     content: "D";
+                 }
+        
+                 77.5%,
+                 78% {
+                     content: "";
+                 }
+        
+                 78.5,
+                 79 {
+                     content: "D";
+                 }
+        
+                 79.5%,
+                 80% {
+                     content: "De";
+                 }
+        
+                 80.5%,
+                 81% {
+                     content: "Des";
+                 }
+        
+                 81.5%,
+                 82% {
+                     content: "Desi";
+                 }
+        
+                 82.5%,
+                 83% {
+                     content: "Desig";
+                 }
+        
+                 83.5%,
+                 84% {
+                     content: "Design";
+                 }
+        
+                 84.5%,
+                 85% {
+                     content: "Designe";
+                 }
+        
+                 85.5%,
+                 86% {
+                     content: "Designer";
+                 }
+                 86.5%,
+                 87%{
+                    content:"Designe";
+                 }
+                 87.5%,
+                 88%{
+                    content: "Design";
+                 }
+                 88.5%,
+                 89%{
+                    content: "Desig";
+                 }
+                 89.5%,
+                 90%{
+                    content: "Desi";
+                 }
+                 90.5%,
+                 91%{
+                    content: "Des";
+                 }
+                 91.5%,
+                 92%{
+                    content: "De";
+                 }
+                 92.5%,
+                 93%{
+                    content: "D";
+                 }
+                 93.5%,
+                 100%{
+                    content: "";
+                 }
 
 }
 

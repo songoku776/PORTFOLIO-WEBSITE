@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <title>Portfolio Website</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">Rumi</a>
+      <nav>
+        <a href="index.html" onclick="LightMode()">Home</a>
+        <a href="aboutme.html" onclick="LightMode()">About me</a>
+        <a href="service.html" onclick="LightMode()" >Service</a>
+        <a href="skill.html" onclick="LightMode()">Skills</a>
+        <a href="contact.html"class="active" onclick="LightMode()">Contact</a>
+      </nav>
+        <div class="dark-mode"><i class="fa-solid fa-moon" onclick="LightDarkMode()"></i></div>
+    </header>
+    <section class="home">
+      
+      <div class="home-content">
+        <span>
+          <h1>Contact</h1>
+        </span>
+        <h2>Please enter your information below:</h2>
+        <br />
+        <span
+          ><label>
+            <h2>NAME</h2>
+          </label>
+        </span>
+        <input type="text" class="inputn" required />
+        <span
+          ><label>
+            <h2>EMAIL</h2>
+          </label>
+        </span>
+        <input type="email" class="inpute" required />
+        <span
+          ><label>
+            <h2>DESCRIPTION</h2>
+          </label>
+        </span>
+        <textarea type="text" class="inputd"></textarea> <br><br>
+        <input type="submit" class="btn"></input>
+      </div>
+        <div class="home-img">
+        <img src="IMRAFIOG.jpg" alt="" ></img>
+      </div>
+    </section>
+   
+     <script src="index.js">
+   
+    </script>
+  </body>
+</html>
